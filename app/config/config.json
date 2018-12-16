@@ -16,12 +16,8 @@
       "dialect": "mysql"
     },
     "production": {
-      "username": "root",
-      "password": "root",
-      "database": "app_db",
-      "host": "localhost",
-      "port": 8889,
-      "dialect": "mysql"
+      "dialect": "mysql",
+      "use_env_variable": "JAWSDB_URL"
     }
 }
   
