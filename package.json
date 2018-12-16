@@ -19,14 +19,9 @@
   "homepage": "https://github.com/susehan27/accountability#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "errorhandler": "^1.5.0",
     "express": "^4.16.4",
-    "express-error-handler": "^1.1.0",
-    "method-override": "^3.0.0",
-    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
     "mysql2": "^1.6.4",
-    "pg": "^7.7.1",
-    "sequelize": "^4.42.0",
-    "serve-favicon": "^2.5.0"
+    "sequelize": "^4.42.0"
   }
 }
