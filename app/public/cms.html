@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav sticky-top">
       <h1 class="staatliches title">ACCOUNTABILITY.</h1>
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -34,29 +34,56 @@
       </ul>
     </nav>
     <div class="row">
-      <div class="row">
-        <div class="col-sm-2 mt-4">
-          <a class="btn btn-light" href="/blog">Go to Blog</a>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col">
+            <a class="btn btn-light" href="/blog">Go Back to Blogs</a>
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4 staatliches">How are you doing spiritually today?</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="jumbotron jumbotron-fluid boxes box1">
+              <div class="container">
+                <a href="https://shereadstruth.com/" class="staatliches box1">She Reads Truth</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="jumbotron jumbotron-fluid boxes box2">
+              <div class="container">
+                <a href="https://www.desiringgod.org/" class="staatliches">Desiring God</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-5 offset-md-3">
+      
+      <div class="col-md-6">
         <form id="cms">
           <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" class="form-control" id="title">
-            <br />
+            <br/>
+            <label for="author">Author:</label>
+            <input type="text" class="form-control" id="author">
+            <br/>
             <label for="body">Body:</label>
             <textarea class="form-control" rows="10" id="body"></textarea>
             <div class="form-group">
               <label for="category">Select Category:</label>
               <select class="custom-select" id="category">
                 <option value="Personal">Personal</option>
-                <option value="Product Review">Product Review</option>
-                <option value="Political">Political</option>
+                <option value="Devotional">Devotional</option>
+                <option value="Sermon">Sermon</option>
               </select>
             </div>
             <br />
-            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+            <button type="submit" class="btn btn-light submit">Submit</button>
           </div>
         </form>
       </div>

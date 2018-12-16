@@ -42,12 +42,12 @@ $(document).ready(function() {
   // InitializeRows handles appending all of our constructed post HTML inside
   // blogContainer
   function initializeRows() {
-    blogContainer.empty();
+    // blogContainer.empty();
     var postsToAdd = [];
     for (var i = 0; i < posts.length; i++) {
       postsToAdd.push(createNewRow(posts[i]));
     }
-    blogContainer.append(postsToAdd);
+    blogContainer.prepend(postsToAdd);
   }
 
   // This function constructs a post's HTML
@@ -55,40 +55,49 @@ $(document).ready(function() {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
     var newPostCardHeading = $("<div>");
-    newPostCardHeading.addClass("card-header");
+    newPostCardHeading.addClass("card-title staatliches");
     var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
+    deleteBtn.text("delete");
+    deleteBtn.addClass("delete btn btn-light");
     var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-default");
+    editBtn.text("edit");
+    editBtn.addClass("edit btn btn-dark");
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
+    var newPostCategory = $("<span>");
+    newPostCategory.addClass("badge badge-dark lato");
     newPostCategory.text(post.category);
-    newPostCategory.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
-    });
+    var newPostAuthor = $("<span>");
+    newPostAuthor.addClass("badge badge-light lato");
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");
+    newPostBody.addClass("card-text");
     newPostTitle.text(post.title + " ");
     newPostBody.text(post.body);
+    newPostAuthor.text(post.author);
+    var newPostFooter = $("<div>");
+    newPostFooter.addClass("card-text");
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
-    newPostTitle.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
+    newPostCardHeading.append(newPostDate);
+    newPostFooter.append(deleteBtn);
+    newPostFooter.append(editBtn);
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostCategory);
+    newPostCardHeading.append(newPostAuthor);
     newPostCardBody.append(newPostBody);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
+    newPostCard.append(newPostFooter);
     newPostCard.data("post", post);
+    newPostCard.css({
+      "max-width": "500px",
+      "max-height": "500px",
+      "padding": "15px",
+      "overflow": "auto"
+    });
     return newPostCard;
   }
 
@@ -115,8 +124,8 @@ $(document).ready(function() {
   // This function displays a message when there are no posts
   function displayEmpty() {
     blogContainer.empty();
-    var messageH2 = $("<h2>");
-    messageH2.css({ "text-align": "center", "margin-top": "50px" });
+    var messageH2 = $("<h4>");
+    messageH2.css({ "text-align": "left", "font-family": "'Staatliches', cursive" });
     messageH2.html("No posts? Click <a href='/cms'>here</a> to start!");
     blogContainer.append(messageH2);
   }

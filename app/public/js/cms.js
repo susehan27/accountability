@@ -15,6 +15,7 @@ $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and category select
   var bodyInput = $("#body");
   var titleInput = $("#title");
+  var authorInput = $("#author");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
   // Giving the postCategorySelect a default value
@@ -23,13 +24,14 @@ $(document).ready(function() {
   $(cmsForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body or a title
-    if (!titleInput.val().trim() || !bodyInput.val().trim()) {
+    if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorInput.val().trim() ) {
       return;
     }
     // Constructing a newPost object to hand to the database
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
+      author: authorInput.val().trim(),
       category: postCategorySelect.val()
     };
 
@@ -60,6 +62,7 @@ $(document).ready(function() {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
         bodyInput.val(data.body);
+        authorInput.val(data.author);
         postCategorySelect.val(data.category);
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit

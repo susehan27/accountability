@@ -30,7 +30,6 @@ $(document).ready(function() {
     getPrayers();
 
     function initializeRows() {
-        prayerContainer.empty();
         var prayersToAdd = [];
         for (var i = 0; i < prayers.length; i++) {
             prayersToAdd.push(createNewRow(prayers[i]));
@@ -44,12 +43,13 @@ $(document).ready(function() {
         var newPostCardHeading = $("<div>");
         newPostCardHeading.addClass("card-header");
         var deleteBtn = $("<button>");
-        deleteBtn.text("x");
-        deleteBtn.addClass("delete btn btn-dark");
+        deleteBtn.text("delete");
+        deleteBtn.addClass("delete btn btn-dark small");
         //var editBtn = $("<button>");
         // editBtn.text("edit");
         // editBtn.addClass("edit btn btn-light");
-        var newPostTitle = $("<h2>");
+        var newPostTitle = $("<h4>");
+        newPostTitle.addClass("staatliches");
         var newPostDate = $("<small>");
         var newPostCardBody = $("<div>");
         newPostCardBody.addClass("card-body");
@@ -60,21 +60,23 @@ $(document).ready(function() {
         var formattedDate = new Date(prayer.createdAt);
         formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
         newPostDate.text(formattedDate);
-        newPostBodyDate.append(newPostDate);
-        newPostCardHeading.append(deleteBtn);
+        newPostCardHeading.append(newPostDate);
+        // newPostCardHeading.append(deleteBtn);
         //newPostCardHeading.append(editBtn);
         newPostCardHeading.append(newPostTitle);
         newPostCardBody.append(newPostBodyDate);
         newPostCardBody.append(newPostBody);
+        newPostCardBody.append(deleteBtn);
         newPostCard.append(newPostCardHeading);
         newPostCard.append(newPostCardBody);
         newPostCard.data("prayer", prayer);
         newPostCard.css({
             float: "left",
             "max-width" : "18rem",
-            "background-color": "#ff7082",
-            "color": "white",
-            "font-family": "'Lato', sans-serif"
+            "left": "0",
+            "margin": "10px",
+            "background-color": "#262626",
+            "color": "#f6f4ef"
         });
         return newPostCard;
     }

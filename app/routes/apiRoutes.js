@@ -60,6 +60,7 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
+      author: req.body.author,
       category: req.body.category
     })
       .then(function(dbPost) {

@@ -14,7 +14,7 @@
 
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav sticky-top">
       <h1 class="staatliches title">ACCOUNTABILITY.</h1>
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -34,27 +34,37 @@
         </li>
       </ul>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <select class="custom-select" id="category">
-              <option selected value="">All Categories</option>
-              <option value="Personal">Personal</option>
-              <option value="Product Review">Product Review</option>
-              <option value="Political">Political</option>
-            </select>
+
+    <div class="row select">
+      <div class="col-md-12">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h3 class="staatliches">use blogs to write your thoughts, reflections & more!</h4>
+            <p class="lead lato">share this page with your accountability partners for encouragement & prayer</p>
           </div>
         </div>
-        <div class="col-md-2">
-          <a class="btn btn-light" href="/cms">New Post</a>
+        <div class="form-group">
+          <select class="custom-select" id="category">
+            <option selected value="">Choose Reflection Type:</option>
+            <option value="Personal">Personal</option>
+            <option value="Devotional">Devotional</option>
+            <option value="Sermon">Sermon</option>
+          </select>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 blog-container">
+      <div class="col-md-8 blog-container">
           
+      </div>
+      <div class="col-md-4 sideBlog">
+          <div class="card">
+            <a class="btn btn-light card2" href="/cms">New Post</a>
+          </div>
+          <div class="card card2">
+
+          </div>
       </div>
     </div>
   </div>
