@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Accountability</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+  <div class="container">
+    <nav class="nav">
+      <h1 class="staatliches title">ACCOUNTABILITY.</h1>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blogs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cms.html">New</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pray.html">Pray</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="bible.html">Bible</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="row">
+        <h4 class="staatliches">Need help finding a verse? Look it up here!</h4>
+    </div>
+  </div>
+  <script id="bw-widget-src" src="//bibles.org/widget/client"></script>
+  <script>
+    BIBLESEARCH.widget({
+      "background": "545454",
+      "selected": "eng-ESV",
+      "versions": "eng-ESV"
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+  <script src="js/blog.js" type="text/javascript"></script>
+  <script src="js/bible.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "accountability",
+  "version": "1.0.0",
+  "description": "project 2",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susehan27/accountability.git"
+  },
+  "author": "Susanna Han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/susehan27/accountability/issues"
+  },
+  "homepage": "https://github.com/susehan27/accountability#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  }
+}

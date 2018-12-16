@@ -1,0 +1,67 @@
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.card-header button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.staatliches {
+  font-family: 'Staatliches', cursive;
+}  
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.nav {
+  padding: 20px;
+  top: 0;
+  position: sticky;
+  background-color: white;
+}
+
+.nav-link:active, :hover{
+  color: black;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: #ff7082;
+}
+
+#newPrayerCard {
+  text-align: center;
+}
+
+.spotify {
+  padding: 20px;
+}
+
+.prayer {
+  padding: 20px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card-header {
+  font-family: 'Lato', sans-serif;
+
+}
+
+.jumbotron {
+  text-align: center;
+}

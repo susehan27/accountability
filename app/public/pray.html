@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accountability</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav sticky-top">
+            <h1 class="staatliches title">ACCOUNTABILITY.</h1>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cms.html">New</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pray.html">Pray</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bible.html">Bible</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-md-6 prayer">
+                <h4 class="staatliches">Keep Track of Your Prayer List</h4>
+                <a id="newPrayerCard" class="btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Add Prayer
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <form class="newPrayerCard">
+                            <div class="form-group">
+                                <label for="name">Prayer For:</label>
+                                <input type="text" class="form-control prayerName">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">thoughts:</label>
+                                <textarea type="text" class="form-control prayerText" row="3"></textarea>
+                            </div>
+                            <button id="addPrayer" type="submit" class="btn btn-dark">Add</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="prayerCards"></div>
+            </div>
+            <div class="col-md-6 spotify">
+                <h4 class="staatliches">Playlists for your prayer time!</h4>
+                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcb6CQIjdqKy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/user/1216580824/playlist/1CDuPkh3cNP09jKAwZR0HW" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWVYgpMbMPJMz" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX02V1eCHz2oO" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/user/bellakaterose/playlist/7qvQVDnLe4asawpZqYhKMQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+    <script src="js/pray.js" type="text/javascript"></script>
+</body>
+</html>
