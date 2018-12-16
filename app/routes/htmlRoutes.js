@@ -20,5 +20,9 @@ module.exports = function(app) {
     app.get("/pray", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/pray.html"));
     });
+
+    app.get("/bible", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/bible.html"));
+    });
 };
 
